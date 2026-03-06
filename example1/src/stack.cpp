@@ -10,6 +10,7 @@ bool Stack::isEmpty()
 void Stack::push(int value)
 {
     size ++;
+    element=value;
 };
 int Stack::pop()
 {
@@ -18,7 +19,7 @@ int Stack::pop()
         throw UnderflowException("Stack is already empty");
     }
     size --;
-    return 0;
+    return element;
 }
 int Stack::getSize()
 {

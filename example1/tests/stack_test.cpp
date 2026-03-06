@@ -6,6 +6,10 @@ class StackTest: public ::testing::Test
 {
     protected: 
         Stack stack;
+
+        void SetUp() override {
+            stack.clean();
+        }
     
 };
 
@@ -23,6 +27,7 @@ TEST_F(StackTest,PopOutOfStack){
     stack.push(0);
     stack.pop();
     ASSERT_TRUE(stack.isEmpty());
+    ASSERT_EQ(0,stack.getSize());
 };
 TEST_F(StackTest,PushTwice)
 {

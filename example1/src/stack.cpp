@@ -1,6 +1,6 @@
 #include "stack.hpp"
 
-Stack::Stack():empty(true){};
+
 
 bool Stack::isEmpty()
 {
@@ -9,14 +9,20 @@ bool Stack::isEmpty()
 
 void Stack::push(int element)
 {
+    size ++;
     empty=false;
 }
 int Stack::pop()
 {
     empty=true;
+    size --;
     return -1;
 }
 int Stack::getSize()
 {
-    return 2;
+    return size;
+}
+void Stack::clean(){
+    empty= true;
+    size ==0;
 }

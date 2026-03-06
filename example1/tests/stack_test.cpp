@@ -38,7 +38,9 @@ TEST_F(StackTest,PushTwice)
     stack.push(0);
     stack.push(1);
     ASSERT_EQ(2,stack.getSize());
+    ASSERT_EQ(1,stack.peek());
     ASSERT_EQ(1,stack.pop());
+    ASSERT_EQ(0,stack.peek());
     ASSERT_EQ(0,stack.pop());
 };
 TEST_F(StackTest, PopEmptyStack)

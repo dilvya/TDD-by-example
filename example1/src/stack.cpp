@@ -33,5 +33,5 @@ int Stack::peek(){
     {
         throw UnderflowException("Stack is already empty ");        
     }
-    return 0;
+    return elements[elements.size() -1];
 }

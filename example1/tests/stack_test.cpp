@@ -5,4 +5,5 @@
 TEST(StackTest,CreateStack)
 {
     Stack stack;
+    ASSERT_TRUE(stack.isEmpty());
 }

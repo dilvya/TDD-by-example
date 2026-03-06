@@ -1,11 +1,13 @@
 #include "stack.hpp"
 
+Stack::Stack():empty(true){};
+
 bool Stack::isEmpty()
 {
-    return true;
+    return empty;
 }
 
 void Stack::push(int element)
 {
-
+    empty=false;
 }

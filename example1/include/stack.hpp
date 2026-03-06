@@ -2,8 +2,9 @@
 
 class Stack{
 
+    bool empty; 
     public: 
-        Stack()=default;
+        Stack();
         bool isEmpty();
         void push(int element);
 };

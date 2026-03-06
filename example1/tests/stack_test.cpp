@@ -11,4 +11,5 @@ TEST(StackTest,PushInStack)
 {
     Stack stack; 
     stack.push(0);
+    ASSERT_FALSE(stack.isEmpty());
 }

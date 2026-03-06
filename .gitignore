@@ -1,0 +1,9 @@
+.vscode/
+.idea/
+.env
+build/
+build-*/
+*.tmp 
+*.log 
+*.bak 
+*.swp 

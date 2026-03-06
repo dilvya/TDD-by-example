@@ -20,6 +20,7 @@ target_sources(example1-dev
         src/stack.cpp
     PUBLIC 
         include/stack.hpp
+        include/exception/underflow.hpp
 )
 
 target_include_directories(example1-dev PUBLIC include)

@@ -1,10 +1,9 @@
 #pragma once
 
 #include <cstddef>
-
+#include "exception/underflow.hpp"
 class Stack{
 
-    bool empty=true; 
     size_t size=0;
     public: 
         Stack()=default;

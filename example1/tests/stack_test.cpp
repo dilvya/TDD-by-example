@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 #include "stack.hpp"
-
+#include "exception/underflow.hpp"
 class StackTest: public ::testing::Test
 {
     protected: 
@@ -37,3 +37,7 @@ TEST_F(StackTest,PushTwice)
     stack.push(1);
     ASSERT_EQ(2,stack.getSize());
 };
+TEST_F(StackTest, PopEmptyStack)
+{
+    ASSERT_THROW(stack.pop(), UnderflowException);
+}; 

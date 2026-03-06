@@ -24,3 +24,9 @@ TEST_F(StackTest,PopOutOfStack){
     stack.pop();
     ASSERT_TRUE(stack.isEmpty());
 };
+TEST_F(StackTest,PushTwice)
+{
+    stack.push(0);
+    stack.push(1);
+    ASSERT_EQ(2,stack.getSize());
+};

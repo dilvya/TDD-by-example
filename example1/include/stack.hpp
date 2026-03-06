@@ -8,4 +8,5 @@ class Stack{
         bool isEmpty();
         void push(int element);
         int pop();
+        int getSize();
 };

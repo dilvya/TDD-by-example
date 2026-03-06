@@ -14,5 +14,9 @@ void Stack::push(int element)
 int Stack::pop()
 {
     empty=true;
-    return 0;
+    return -1;
+}
+int Stack::getSize()
+{
+    return 2;
 }

@@ -44,3 +44,7 @@ TEST_F(StackTest, PopEmptyStack)
 {
     ASSERT_THROW(stack.pop(), UnderflowException);
 }; 
+TEST_F(StackTest, PeekEmptyStack)
+{
+    ASSERT_THROW(stack.peek(), UnderflowException);
+};

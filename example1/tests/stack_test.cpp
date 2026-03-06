@@ -22,4 +22,5 @@ TEST_F(StackTest,PushInToStack)
 TEST_F(StackTest,PopOutOfStack){
     stack.push(0);
     stack.pop();
+    ASSERT_TRUE(stack.isEmpty());
 };

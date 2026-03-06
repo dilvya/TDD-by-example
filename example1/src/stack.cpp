@@ -13,5 +13,6 @@ void Stack::push(int element)
 }
 int Stack::pop()
 {
-    
+    empty=true;
+    return 0;
 }

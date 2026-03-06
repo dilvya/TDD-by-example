@@ -2,14 +2,20 @@
 
 #include "stack.hpp"
 
-TEST(StackTest,CreateStack)
+class StackTest: public ::testing::Test
 {
-    Stack stack;
+    protected: 
+        Stack stack;
+    
+};
+
+TEST_F(StackTest,CreateStack)
+{
     ASSERT_TRUE(stack.isEmpty());
-}
-TEST(StackTest,PushInStack)
+};
+
+TEST_F(StackTest,PushInStack)
 {
-    Stack stack; 
     stack.push(0);
     ASSERT_FALSE(stack.isEmpty());
-}
+};

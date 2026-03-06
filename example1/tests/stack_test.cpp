@@ -16,12 +16,14 @@ class StackTest: public ::testing::Test
 TEST_F(StackTest,CreateStack)
 {
     ASSERT_TRUE(stack.isEmpty());
+    ASSERT_EQ(0, stack.getSize());
 };
 
 TEST_F(StackTest,PushInToStack)
 {
     stack.push(0);
     ASSERT_FALSE(stack.isEmpty());
+    ASSERT_EQ(1, stack.getSize());
 };
 TEST_F(StackTest,PopOutOfStack){
     stack.push(0);

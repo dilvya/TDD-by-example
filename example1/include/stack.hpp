@@ -7,4 +7,5 @@ class Stack{
         Stack();
         bool isEmpty();
         void push(int element);
+        int pop();
 };

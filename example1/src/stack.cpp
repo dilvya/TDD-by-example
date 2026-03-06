@@ -11,3 +11,7 @@ void Stack::push(int element)
 {
     empty=false;
 }
+int Stack::pop()
+{
+    
+}

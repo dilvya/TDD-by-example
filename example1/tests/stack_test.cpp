@@ -14,8 +14,12 @@ TEST_F(StackTest,CreateStack)
     ASSERT_TRUE(stack.isEmpty());
 };
 
-TEST_F(StackTest,PushInStack)
+TEST_F(StackTest,PushInToStack)
 {
     stack.push(0);
     ASSERT_FALSE(stack.isEmpty());
+};
+TEST_F(StackTest,PopOutOfStack){
+    stack.push(0);
+    stack.pop();
 };

@@ -4,27 +4,27 @@
 
 bool Stack::isEmpty()
 {
-    return size == 0;
+    return elements.size() ==0;
 }
 
 void Stack::push(int value)
 {
-    size ++;
-    element=value;
+    elements.push_back(value);
 };
 int Stack::pop()
 {
-    if(size == 0)
+    if(elements.size()==0)
     {
         throw UnderflowException("Stack is already empty");
     }
-    size --;
-    return element;
+    int result = elements[elements.size()-1];
+    elements.erase(elements.end());
+    return result;
 }
 int Stack::getSize()
 {
-    return size;
+    return elements.size();
 }
 void Stack::clean(){
-    size =0;
+    elements.clear();
 }

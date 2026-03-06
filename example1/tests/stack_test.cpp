@@ -19,7 +19,7 @@ TEST_F(StackTest,CreateStack)
     ASSERT_EQ(0, stack.getSize());
 };
 
-TEST_F(StackTest,PushInToStack)
+TEST_F(StackTest,PushIntoStack)
 {
     stack.push(0);
     ASSERT_FALSE(stack.isEmpty());
@@ -38,6 +38,7 @@ TEST_F(StackTest,PushTwice)
     stack.push(1);
     ASSERT_EQ(2,stack.getSize());
     ASSERT_EQ(1,stack.pop());
+    ASSERT_EQ(0,stack.pop());
 };
 TEST_F(StackTest, PopEmptyStack)
 {

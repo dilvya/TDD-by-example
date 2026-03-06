@@ -2,10 +2,10 @@
 
 #include <cstddef>
 #include "exception/underflow.hpp"
+#include <vector>
 class Stack{
 
-    size_t size=0;
-    int element;
+    std::vector<int> elements;
 
     public: 
         Stack()=default;

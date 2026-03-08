@@ -51,3 +51,12 @@ TEST_F(StackTest, PeekEmptyStack)
 {
     ASSERT_THROW(stack.peek(), UnderflowException);
 };
+TEST_F(StackTest, UnderflowExceptionMessage)
+{
+    try{
+        stack.pop();
+    }catch(const UnderflowException &e)
+    {
+        EXPECT_STREQ(e.what(),"Stack is already empty");
+    }
+};

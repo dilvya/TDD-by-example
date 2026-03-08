@@ -28,3 +28,10 @@ int Stack::getSize()
 void Stack::clean(){
     elements.clear();
 }
+int Stack::peek(){
+    if(elements.size()==0)
+    {
+        throw UnderflowException("Stack is already empty ");        
+    }
+    return elements[elements.size() -1];
+}

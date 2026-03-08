@@ -24,6 +24,7 @@ TEST_F(StackTest,PushIntoStack)
     stack.push(0);
     ASSERT_FALSE(stack.isEmpty());
     ASSERT_EQ(1, stack.getSize());
+    ASSERT_EQ(0, stack.peek());
     ASSERT_EQ(0, stack.pop());
 };
 TEST_F(StackTest,PopOutOfStack){
@@ -37,10 +38,16 @@ TEST_F(StackTest,PushTwice)
     stack.push(0);
     stack.push(1);
     ASSERT_EQ(2,stack.getSize());
+    ASSERT_EQ(1,stack.peek());
     ASSERT_EQ(1,stack.pop());
+    ASSERT_EQ(0,stack.peek());
     ASSERT_EQ(0,stack.pop());
 };
 TEST_F(StackTest, PopEmptyStack)
 {
     ASSERT_THROW(stack.pop(), UnderflowException);
 }; 
+TEST_F(StackTest, PeekEmptyStack)
+{
+    ASSERT_THROW(stack.peek(), UnderflowException);
+};

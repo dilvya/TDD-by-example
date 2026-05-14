@@ -10,4 +10,5 @@ TEST(PrimeNumberTest,findPrimeNumber)
     EXPECT_THAT(computer.findUntil(1), testing::IsEmpty());
     EXPECT_THAT(computer.findUntil(2), testing::ElementsAre(2));
     EXPECT_THAT(computer.findUntil(3), testing::ElementsAre(2,3));
+    EXPECT_THAT(computer.findUntil(4), testing::ElementsAre(2,3));
 };

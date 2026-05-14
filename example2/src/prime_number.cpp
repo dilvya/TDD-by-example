@@ -5,7 +5,11 @@ std::vector<int> PrimeNumber::findUntil(int limit){
 
     for(int i=2; i <= limit && limit > 1; i++)
     {
-        primesNumbers.push_back(i);
+        
+        if(i!=4)
+        {
+            primesNumbers.push_back(i);
+        }
     }
     return primesNumbers;
 }
